@@ -35,6 +35,7 @@ public class LovePostClient {
         this.spreadsheetID = lovePostAPI.createSpreadsheet(SPREADSHEET_DEFAULT_NAME);
 
         List<Integer> sheetsIds = lovePostAPI.getSheets(spreadsheetID);
+        @SuppressWarnings("unused")
         Integer newSheetId = lovePostAPI.addSheet(spreadsheetID, SPREADSHEET_DEFAULT_SHEET);
         for(Integer id : sheetsIds){ lovePostAPI.deleteSheet(spreadsheetID, id); }
         lovePostAPI.appendData(spreadsheetID,

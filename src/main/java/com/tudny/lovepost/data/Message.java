@@ -20,14 +20,17 @@ public class Message {
         this.dateTime = LocalDateTime.parse(messageJson.getDateTime(), formatter);
     }
 
+    @SuppressWarnings("unused")
     public Integer getId() {
         return id;
     }
 
+    @SuppressWarnings("unused")
     public LocalDateTime getDateTime() {
         return dateTime;
     }
 
+    @SuppressWarnings("unused")
     public String getMessage() {
         return message;
     }

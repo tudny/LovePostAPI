@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.tudny'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation 'com.google.api-client:google-api-client:1.30.4'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.30.6'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.0'
+
+    implementation 'com.github.tudny:TudLogger:+'
+}
+
+test {
+    useJUnitPlatform()
+}
